@@ -1,0 +1,258 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;600&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-weight: 300;
+  font-size: 1.05rem;
+  font-family: "Poppins", sans-serif;
+  line-height: 1.6;
+  background: rgb(32, 32, 32);
+}
+
+.btn {
+  font-family: inherit;
+  cursor: pointer;
+  outline: 0;
+  font-size: 1.05rem;
+}
+/* NOT SURE WHAT THIS IS */
+.text {
+  opacity: 0.8;
+}
+.title {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.container {
+  min-height: 100vh;
+}
+.cocktail-wrapper {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  background: rgb(32, 32, 32);
+  color: white;
+  text-align: center;
+}
+.cocktail-search {
+  margin: 2rem 0;
+}
+.cocktail-search cite {
+  font-size: 1rem;
+}
+
+.cocktail-search-box {
+  margin: 1.2rem 0;
+  display: flex;
+  align-items: stretch;
+}
+
+.search-control,
+.search-btn {
+  width: 100%;
+}
+
+.search-control {
+  padding: 0 1rem;
+  font-size: 1.1rem;
+  font-family: inherit;
+  outline: 0;
+  border: 1px rgb(58, 58, 58) solid;
+  border-right: none;
+  border-top-left-radius: 2rem;
+  border-bottom-left-radius: 2rem;
+}
+.search-control::placeholder {
+  color: rgb(82, 82, 82);
+}
+.search-btn {
+  width: 55px;
+  height: 55px;
+  font-size: 1.8rem;
+  border: 1px solid rgb(58, 58, 58);
+  border-left: white;
+  border-top-right-radius: 2rem;
+  border-bottom-right-radius: 2rem;
+  background-color: rgb(255, 255, 255);
+  color: white;
+  padding-right: 1rem;
+  transition: all 0.3 linear;
+}
+
+.cocktail-result {
+  margin-top: 4rem;
+}
+
+#cocktail {
+  margin: 2.4rem 0;
+}
+
+.cocktail-item {
+  border-radius: 1rem;
+  overflow: hidden;
+
+  background-color: rgb(34, 34, 34);
+  box-shadow: 0 4px 20px -5px rgb(6, 6, 6);
+  margin: 2rem 0;
+}
+
+.cocktail-img img {
+  width: 100%;
+  display: block;
+}
+
+.cocktail-name {
+  padding: 1.5rem 0.5rem;
+}
+.cocktail-name h3 {
+  font-size: 1.4rem;
+}
+.recipe-btn {
+  text-decoration: none;
+  color: white;
+  background-color: rgb(0, 0, 0);
+  font-weight: 500;
+  font-size: 1.1rem;
+  padding: 0.75rem 0;
+  display: block;
+  width: 180px;
+  margin: 1rem auto;
+  border-radius: 2rem;
+  transition: all 0.3 linear\;;
+}
+
+.recipe-btn:hover {
+  background-color: rgb(68, 68, 68);
+}
+
+.cocktail-details {
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  background-color: rgb(37, 38, 39);
+  border-radius: 1rem;
+  width: 90%;
+  height: 90%;
+  overflow-y: scroll;
+  padding: 2rem 0;
+}
+
+.cocktail-details::-webkit-scrollbar {
+  width: 10px;
+}
+.cocktail-details::-webkit-scrollbar-thumb {
+  background: rgb(255, 255, 255);
+  border-radius: 2rem;
+}
+.cocktail-details h3 {
+  margin-bottom: 1.5rem;
+}
+ul {
+  list-style-type: none;
+  margin-bottom: 1.5rem;
+}
+
+/* JAVA SCRIPT */
+.showRecipe {
+  display: block;
+}
+.cocktail-details-content {
+  margin: 2rem;
+}
+/* .cocktail-details-content p:not(.recipe-category) {
+  padding: 1rem 0;
+} */
+.recipe-close-btn {
+  position: absolute;
+  right: 1.5rem;
+  top: 1rem;
+  font-size: 2rem;
+  color: white;
+  background: inherit;
+  border: none;
+  width: 40px;
+  height: 20px;
+}
+.recipe-title {
+  letter-spacing: 2px;
+  padding-bottom: 1rem;
+}
+.recipe-category {
+  background-color: white;
+  font-weight: 600;
+  color: rgb(41, 41, 41);
+
+  display: inline-block;
+  padding: 0.2rem 0.5rem;
+  border-radius: 0.3rem;
+}
+.recipe-instruct {
+  padding: 1rem 0;
+}
+.recipe-cocktail-img img {
+  width: 120px;
+  height: 120px;
+  margin: 0 auto;
+  display: block;
+  border-radius: 50%;
+}
+.recipe-link {
+  margin: 1.4rem 0;
+}
+.recipe-link a {
+  color: white;
+  font-size: 1.2rem;
+  font-weight: 700;
+  transition: all 0.3s ease;
+  text-decoration: none;
+  padding: 0.5rem 1rem;
+  border-radius: 1rem;
+}
+.recipe-link a:hover {
+  background: black;
+}
+
+.notFound {
+  grid-template-columns: 1fr !important;
+  color: rgb(255, 255, 255);
+  font-size: 1.8rem;
+  font-weight: 600;
+  width: 100%;
+}
+
+/* MEDIA SCREENS */
+@media screen and (min-width: 600px) {
+  .cocktail-search-box {
+    width: 550px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  #cocktail {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+  }
+  .cocktail-item {
+    margin: 0;
+  }
+  .cocktail-details {
+    width: 700px;
+  }
+}
+
+@media screen and (min-width: 990px) {
+  #cocktail {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
